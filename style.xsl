@@ -48,7 +48,7 @@
 						</div>
 					</div>
 					<xsl:for-each select="renfe/estaciones/estacion">
-						<div id="cont-estacion{@id}" class="container px-sm-3 px-md-2 px-lg-1 px-xl-0 mb-5" style="display: none;">
+						<div id="cont-estacion{@id}" class="container px-sm-3 px-md-2 px-lg-1 px-xl-0 mb-5 clearfix" style="display: none;">
 							<a name="cont-estacion{@id}" />
 							<h1>
 								<xsl:value-of select="nombre" />
