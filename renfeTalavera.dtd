@@ -1,0 +1,21 @@
+<!ELEMENT renfe (estaciones, trenes, entradas, salidas)>
+<!ELEMENT estaciones (estacion+)>
+<!ELEMENT estacion (nombre, direccion, imagen)>
+<!ATTLIST estacion id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT trenes (tren+)>
+<!ELEMENT tren (tipo)>
+<!ATTLIST tren id ID #REQUIRED>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT entradas (entrada+)>
+<!ELEMENT entrada (hora, via)>
+<!ELEMENT salidas (salida+)>
+<!ELEMENT salida (hora, via)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT via (#PCDATA)>
+<!ATTLIST entrada tren IDREF #REQUIRED>
+<!ATTLIST entrada origen IDREF #REQUIRED>
+<!ATTLIST salida tren IDREF #REQUIRED>
+<!ATTLIST salida destino IDREF #REQUIRED>

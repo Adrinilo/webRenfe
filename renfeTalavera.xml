@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<!DOCTYPE renfe SYSTEM "renfeTalavera.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<renfe>
+    <estaciones>
+        <estacion id="E-tal">
+            <nombre>Talavera de la Reina</nombre>
+            <direccion>Paseo Estación Ferrocarril, s/n --- 45600 Talavera de la Reina --- TOLEDO</direccion>
+            <imagen>https://www.adif.es/documents/20124/4633439/35200F.jpg</imagen>
+        </estacion>
+        <estacion id="E-mad.ato"> 
+            <nombre>Madrid Atocha - Cercanías</nombre>
+            <direccion>Glorieta Emperador Carlos V, s/n --- 28045 Madrid --- MADRID</direccion>
+            <imagen>https://acortar.link/1g5muq</imagen>
+        </estacion>
+        <estacion id="E-sev.san">
+            <nombre>Sevilla - Santa Justa</nombre>
+            <direccion>Avda. Kansas City, s/n --- 41007 Sevilla --- SEVILLA</direccion>
+            <imagen>https://www.adif.es/documents/34234/3116111/a51003_sevilla.jpg</imagen>
+        </estacion>
+        <estacion id="E-bad">
+            <nombre>Badajoz</nombre>
+            <direccion>Avda Carolina Coronado, s/n --- 06006 Badajoz --- BADAJOZ</direccion>
+            <imagen>https://www.adif.es/documents/34234/3116907/a37606.jpg</imagen>
+        </estacion>
+        <estacion id="E-cac">
+            <nombre>Cáceres</nombre>
+            <direccion>Avda. Juan Pablo II, 6 --- 10005 Cáceres --- CACERES</direccion>
+            <imagen>https://www.adif.es/documents/34234/3119417/a35400.jpg</imagen>
+        </estacion>
+        <estacion id="E-hue">
+            <nombre>Huelva</nombre>
+            <direccion>Avda. de Cádiz, s/n --- 21003 Huelva --- HUELVA</direccion>
+            <imagen>https://www.adif.es/documents/34234/3119997/43019_DSC0657.png</imagen>
+        </estacion>
+    </estaciones>
+    <trenes>
+        <tren id="t17902">
+            <tipo>MD</tipo>
+        </tren>
+        <tren id="t17012">
+            <tipo>MD</tipo>
+        </tren>
+        <tren id="t17907">
+            <tipo>MD</tipo>        
+        </tren>
+        <tren id="t17018">
+            <tipo>REGIONAL EXPRES</tipo>
+        </tren>
+        <tren id="t17025">
+            <tipo>MD</tipo>
+        </tren>
+        <tren id="t17014">
+            <tipo>REGIONAL EXPRES</tipo>
+        </tren>
+        <tren id="t17021">
+            <tipo>REGIONAL EXPRES</tipo>
+        </tren>
+        <tren id="t17900">
+            <tipo>AVE</tipo>
+        </tren>
+        <tren id="t17901">
+            <tipo>MD</tipo>
+        </tren>
+        <tren id="t17706">
+            <tipo>REGIONAL EXPRES</tipo>
+        </tren>
+        <tren id="t17703">
+            <tipo>REGIONAL EXPRES</tipo>
+        </tren>
+    </trenes>
+    <entradas>
+        <entrada origen="E-mad.ato" tren="t17902">
+            <hora>11:47</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17012">
+            <hora>16:13</hora>
+            <via>2</via>
+        </entrada>
+        <entrada origen="E-sev.san" tren="t17907">
+            <hora>18:44</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17018">
+            <hora>20:18</hora>
+            <via>4</via>
+        </entrada>
+        <entrada origen="E-bad" tren="t17025">
+            <hora>20:24</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17014">
+            <hora>09:35</hora>
+            <via>4</via>
+        </entrada>
+        <entrada origen="E-cac" tren="t17021">
+            <hora>09:38</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17900">
+            <hora>11:47</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17902">
+            <hora>11:47</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17012">
+            <hora>16:13</hora>
+            <via>2</via>
+        </entrada>
+        <entrada origen="E-sev.san" tren="t17901">
+            <hora>18:44</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-hue" tren="t17901">
+            <hora>18:44</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-sev.san" tren="t17907">
+            <hora>18:44</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17018">
+            <hora>20:18</hora>
+            <via>4</via>
+        </entrada>
+        <entrada origen="E-bad" tren="t17025">
+            <hora>20:24</hora>
+            <via>1</via>
+        </entrada>
+        <entrada origen="E-mad.ato" tren="t17706">
+            <hora>22:22</hora>
+            <via>4</via>
+        </entrada>
+    </entradas>
+    <salidas>
+        <salida destino="E-sev.san" tren="t17902">
+            <hora>11:48</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17907">
+            <hora>18:45</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-cac" tren="t17018">
+            <hora>20:19</hora>
+            <via>4</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17025">
+            <hora>20:25</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17703">
+            <hora>06:23</hora>
+            <via>2</via>
+        </salida>
+        <salida destino="E-bad" tren="t17014">
+            <hora>09:36</hora>
+            <via>4</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17021">
+            <hora>09:39</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-sev.san" tren="t17900">
+            <hora>11:48</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-sev.san" tren="t17902">
+            <hora>11:48</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17901">
+            <hora>18:45</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17907">
+            <hora>18:45</hora>
+            <via>1</via>
+        </salida>
+        <salida destino="E-cac" tren="t17018">
+            <hora>20:19</hora>
+            <via>4</via>
+        </salida>
+        <salida destino="E-mad.ato" tren="t17025">
+            <hora>20:25</hora>
+            <via>1</via>
+        </salida>
+    </salidas>
+</renfe>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="img/logo-adif_1-1.jpg" class="text-white" />
+  <title>Adif/Talavera</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="cont-principal" class="container-fluid p-0 m-0">
+    <nav class="navbar navbar-expand-md navbar-light bg-white d-flex justify-content-center">
+      <div class="d-flex flex-fill">
+        <div class="mx-2 p-1 d-none d-md-inline-flex" id="logo-ministerio">
+          <a class="mx-auto" href="#"><img src="img/logo-ministerio.jpg" alt="logo-ministerio" /></a>
+        </div>
+        <div class="mx-2 p-1" id="logo-adif">
+          <a class="mx-auto" href="#"><img src="img/logo-adif.jpg" alt="logo-adif" /></a>
+        </div>
+      </div>
+      <div class="flex-fill text-center">
+        <a class="navbar-brand text-center" href="#">RENFE</a>
+      </div>
+      <div class="flex-fill text-right">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="flex-fill">
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid p-0 bg-light">
+      <div class="container px-0 py-5 text-success pl-3 pl-md-0">
+        <h2>Información al usuario</h2>
+        <p class="py-2">INICIO / Información al usuario / Estaciones</p>
+      </div>
+    </div>
+    <div id="cont-estacion" class="container px-sm-3 px-md-2 px-lg-1 px-xl-0">
+      <h1 class="mt-3">Estación de Talavera de la Reina</h1>
+      <hr class="bg-dark m-0 mb-4" />
+      <div>
+        <img class="img-fluid float-md-left pl-4 pl-md-0 pr-md-3"
+          src="https://www.adif.es/documents/20124/4633439/35200F.jpg" alt="EstaciónTalavera" />
+        <p>Las estaciones son algo más que un lugar desde el que subir a un tren o desembarcar del mismo.
+          Además de prestar sus servicios a los viajeros y usuarios, muchas de ellas constituyen una referencia en
+          las localidades donde su ubican.
+        </p>
+        <p>Aquí se pueden conocer los horarios de llegadas y salidas de la estación, así como los servicios que se
+          ofrecen en su recinto e instalaciones. Para ello acceda a dicha información a través del selector que
+          ponemos a su disposición.
+        </p>
+        <p><strong>Dirección:</strong> Paseo Estación Ferrocarril, s/n --- 45600 Talavera de la Reina --- TOLEDO</p>
+      </div>
+    </div>
+    <div class="container p-0 py-3 mb-5">
+      <h2 class="px-0 pt-3">Descubre los servicios de la estación</h2>
+
+      <div class="btn-group btn-group-toggle btn-lg btn-block p-0 shadow-sm bg-success rounded-pill" role="group"
+        data-toggle="buttons">
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle rounded-pill"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            INFORMACION
+          </button>
+          <div class="dropdown-menu border-0 bg-transparent" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item p-2 my-1 shadow text-white bg-success rounded-pill" href="#">Talavera de la
+              Reina</a>
+            <a class="dropdown-item p-2 my-1 shadow text-white bg-success rounded-pill" href="#">Madrid Atocha -
+              Cercanías</a>
+            <a class="dropdown-item p-2 my-1 shadow text-white bg-success rounded-pill" href="#">Sevilla - Santa
+              Justa</a>
+
+          </div>
+        </div>
+        <label class="btn btn-success rounded-pill">
+          <input type="radio" name="options" id="option2" autocomplete="off"> ENTRADAS
+        </label>
+        <label class="btn btn-success rounded-pill">
+          <input type="radio" name="options" id="option3" autocomplete="off"> SALIDAS
+        </label>
+      </div>
+
+      <div class="row justify-content-center align-items-center pt-3 mt-3 mx-0">
+        <div class="col-3">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0">
+              <h6 class="card-text"><strong>HORA</strong></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0">
+              <h6 class="card-text ml-1"><strong>ORIGEN</strong></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0">
+              <h6 class="card-text ml-1"><strong>TREN</strong></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-1 pl-1">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0">
+              <h6 class="card-text ml-1"><strong>VÍA</strong></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center py-3 my-3 mx-0 border rounded-pill shadow-sm bg-light">
+        <div class="col-3">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text">XX:XX</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text ml-1">Madrid</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text ml-1">RF - MD</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text ml-1">4</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center py-3 my-3 mx-0 border rounded-pill shadow-sm bg-light">
+        <div class="col-3">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text">XX:XX</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text ml-1">Madrid</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text ml-1">RF - MD</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="card border-0">
+            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+              <h6 class="card-text ml-1">4</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="bg-light p-0 m-0 text-center">
+    <h4 class="text-dark m-0 py-2">RENFE - ADRINILO</h4>
+  </div>
+  <footer class="bg-success text-dark p-0 m-0 d-flex align-items-center justify-content-center" style=" opacity: .75;">
+    <div class="align-self-center">
+    <h6 class="pt-2">Todos los datos empleados en esta practica han sido obtenidos desde la web: <a
+        href="https://www.adif.es/w/35200-talavera-de-la-reina?pageFromPlid=335"
+        class="text-dark text-decoration-none">adif.es/talavera-de-la-reina</a></h6>
+      </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
