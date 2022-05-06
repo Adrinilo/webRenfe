@@ -59,13 +59,13 @@
 									<img class="img-fluid float-md-left px-3 px-md-0 pr-md-3 flex-fill" style="min-height: 35vh; max-height: 35vh;" src="{imagen}" alt="estación{@id}" />
 								</div>
 								<p>Las estaciones son algo más que un lugar desde el que subir a un tren o desembarcar del mismo.
-                Además de prestar sus servicios a los viajeros y usuarios, muchas de ellas constituyen una referencia en
-                las localidades donde su ubican.
-                </p>
+								Además de prestar sus servicios a los viajeros y usuarios, muchas de ellas constituyen una referencia en
+								las localidades donde su ubican.
+								</p>
 								<p>Aquí se pueden conocer los horarios de llegadas y salidas de la estación, así como los servicios que se
-                ofrecen en su recinto e instalaciones. Para ello acceda a dicha información a través del selector que
-                ponemos a su disposición.
-                </p>
+								ofrecen en su recinto e instalaciones. Para ello acceda a dicha información a través del selector que
+								ponemos a su disposición.
+								</p>
 								<p>
 									<strong>Dirección: </strong>
 									<xsl:value-of select="direccion" />
@@ -78,8 +78,8 @@
 						<div class="btn-group btn-group-toggle btn-lg btn-block p-0 shadow-sm bg-success rounded-pill" role="group" data-toggle="buttons">
 							<div class="btn-group" role="group">
 								<button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle rounded-pill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  INFORMACION
-                </button>
+									INFORMACION
+								</button>
 								<div class="dropdown-menu border-0 bg-transparent" aria-labelledby="btnGroupDrop1">
 									<xsl:for-each select="renfe/estaciones/estacion">
 										<a class="dropdown-item p-2 my-1 shadow text-white bg-success rounded-pill" href="#" onclick="ocultarEstaciones();show('cont-estacion{@id}')">
@@ -158,8 +158,8 @@
 														<xsl:value-of select="/renfe/estaciones/estacion[@id = $IDorigen]/nombre" />
 													</xsl:when>
 													<xsl:otherwise>
-                            Origen de viaje no definido
-                          </xsl:otherwise>
+														Origen de viaje no definido
+													</xsl:otherwise>
 												</xsl:choose>
 											</h6>
 										</div>
@@ -178,8 +178,8 @@
 														<xsl:value-of select="/renfe/trenes/tren[@id = $IDtren]/tipo" />
 													</xsl:when>
 													<xsl:otherwise>
-                            Tipo de tren no definido
-                          </xsl:otherwise>
+														Tipo de tren no definido
+													</xsl:otherwise>
 												</xsl:choose>
 											</h6>
 											<p class="card-text w-25 text-right py-0 m-0">
