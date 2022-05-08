@@ -83,117 +83,228 @@
                                     </xsl:for-each>
                                 </div>
                             </div>
-                            <label class="btn btn-success rounded-pill">
+                            <label class="btn btn-success rounded-pill" 
+                                   onclick="document.getElementById('cont-entradas').style.display='block';
+                                            document.getElementById('cont-salidas').style.display='none';">
                                 <input type="radio" name="options" id="option2" autocomplete="off" />
-                                ENTRADAS
+                                ENTRADAS                                                             
                             </label>
-                            <label class="btn btn-success rounded-pill">
+                            
+                            <label class="btn btn-success rounded-pill" 
+                                   onclick="document.getElementById('cont-salidas').style.display='block';
+                                            document.getElementById('cont-entradas').style.display='none';">
                                 <input type="radio" name="options" id="option3" autocomplete="off" />
                                 SALIDAS
-                            </label>
+                            </label>                            
                         </div>
-                        <div class="row justify-content-center align-items-center pt-3 mt-3 mx-0">
-                            <div class="col-3">
-                                <div class="card border-0">
-                                    <div class="card-body d-flex justify-content-start align-items-center p-0">
-                                        <h6 class="card-text">
-                                            <strong>HORA</strong>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card border-0">
-                                    <div class="card-body d-flex justify-content-start align-items-center p-0">
-                                        <h6 class="card-text">
-                                            <strong>ORIGEN</strong>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card border-0">
-                                    <div class="card-body d-flex justify-content-start align-items-center p-0">
-                                        <h6 class="card-text">
-                                            <strong>TREN</strong>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1 pl-1">
-                                <div class="card border-0">
-                                    <div class="card-body d-flex justify-content-start align-items-center p-0">
-                                        <h6 class="card-text">
-                                            <strong>VÍA</strong>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <xsl:for-each select="renfe/entradas/entrada">
-                            <div class="row justify-content-center align-items-center py-3 my-3 mx-0 border rounded-pill shadow-sm bg-light">
+                        <div id="cont-entradas" style="display: block;">
+                            <div class="row justify-content-center align-items-center pt-3 mt-3 mx-0">
                                 <div class="col-3">
                                     <div class="card border-0">
-                                        <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
                                             <h6 class="card-text">
-                                                <xsl:value-of select="hora" />
+                                                <strong>HORA</strong>
                                             </h6>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="card border-0">
-                                        <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
                                             <h6 class="card-text">
-                                                <xsl:variable name="IDorigen">
-                                                    <xsl:value-of select="@origen" />
-                                                </xsl:variable>
-                                                <xsl:choose>
-                                                    <xsl:when test="$IDorigen = /renfe/estaciones/estacion/@id">
-                                                        <xsl:value-of select="/renfe/estaciones/estacion[@id = $IDorigen]/nombre" />
-                                                    </xsl:when>
-                                                    <xsl:otherwise>
-                                                        Origen de viaje no definido
-                                                    </xsl:otherwise>
-                                                </xsl:choose>
+                                                <strong>ORIGEN</strong>
                                             </h6>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="card border-0">
-                                        <div class="card-body d-flex justify-content-between align-items-lg-center align-items-start p-0 bg-light flex-column flex-lg-row">
-                                            <h6 class="card-text p-0 m-0">
-                                                <xsl:variable name="IDtren">
-                                                    <xsl:value-of select="@tren" />
-                                                </xsl:variable>
-                                                <xsl:choose>
-                                                    <xsl:when test="$IDtren = /renfe/trenes/tren/@id">
-                                                        RF -
-                                                        <xsl:value-of select="/renfe/trenes/tren[@id = $IDtren]/tipo" />
-                                                    </xsl:when>
-                                                    <xsl:otherwise>
-                                                        Tipo de tren no definido
-                                                    </xsl:otherwise>
-                                                </xsl:choose>
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
+                                            <h6 class="card-text">
+                                                <strong>TREN</strong>
                                             </h6>
-                                            <p class="card-text w-50 text-lg-center text-right p-0 m-0 pr-lg-4">
-                                                <xsl:value-of select="@tren" />
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 pl-1">
                                     <div class="card border-0">
-                                        <div class="card-body d-flex justify-content-start p-0 bg-light">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
                                             <h6 class="card-text">
-                                                <xsl:value-of select="via" />
+                                                <strong>VÍA</strong>
                                             </h6>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </xsl:for-each>
+                            <xsl:for-each select="renfe/entradas/entrada">
+                                <div class="row justify-content-center align-items-center py-3 my-3 mx-0 border rounded-pill shadow-sm bg-light">
+                                    <div class="col-3">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+                                                <h6 class="card-text">
+                                                    <xsl:value-of select="hora" />
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+                                                <h6 class="card-text">
+                                                    <xsl:variable name="IDorigen">
+                                                        <xsl:value-of select="@origen" />
+                                                    </xsl:variable>
+                                                    <xsl:choose>
+                                                        <xsl:when test="$IDorigen = /renfe/estaciones/estacion/@id">
+                                                            <xsl:value-of select="/renfe/estaciones/estacion[@id = $IDorigen]/nombre" />
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            Origen de viaje no definido
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-between align-items-lg-center align-items-start p-0 bg-light flex-column flex-lg-row">
+                                                <h6 class="card-text p-0 m-0">
+                                                    <xsl:variable name="IDtren">
+                                                        <xsl:value-of select="@tren" />
+                                                    </xsl:variable>
+                                                    <xsl:choose>
+                                                        <xsl:when test="$IDtren = /renfe/trenes/tren/@id">
+                                                            RF -
+                                                            <xsl:value-of select="/renfe/trenes/tren[@id = $IDtren]/tipo" />
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            Tipo de tren no definido
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </h6>
+                                                <p class="card-text w-50 text-lg-center text-right p-0 m-0 pr-lg-4">
+                                                    <xsl:value-of select="@tren" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-start p-0 bg-light">
+                                                <h6 class="card-text">
+                                                    <xsl:value-of select="via" />
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </xsl:for-each>
+                        </div>
+                        <div id="cont-salidas" style="display: none;">
+                            <div class="row justify-content-center align-items-center pt-3 mt-3 mx-0">
+                                <div class="col-3">
+                                    <div class="card border-0">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
+                                            <h6 class="card-text">
+                                                <strong>HORA</strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card border-0">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
+                                            <h6 class="card-text">
+                                                <strong>DESTINO</strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card border-0">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
+                                            <h6 class="card-text">
+                                                <strong>TREN</strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 pl-1">
+                                    <div class="card border-0">
+                                        <div class="card-body d-flex justify-content-start align-items-center p-0">
+                                            <h6 class="card-text">
+                                                <strong>VÍA</strong>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <xsl:for-each select="renfe/salidas/salida">
+                                <div class="row justify-content-center align-items-center py-3 my-3 mx-0 border rounded-pill shadow-sm bg-light">
+                                    <div class="col-3">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+                                                <h6 class="card-text">
+                                                    <xsl:value-of select="hora" />
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-start align-items-center p-0 bg-light">
+                                                <h6 class="card-text">
+                                                    <xsl:variable name="IDdestino">
+                                                        <xsl:value-of select="@destino" />
+                                                    </xsl:variable>
+                                                    <xsl:choose>
+                                                        <xsl:when test="$IDdestino = /renfe/estaciones/estacion/@id">
+                                                            <xsl:value-of select="/renfe/estaciones/estacion[@id = $IDdestino]/nombre" />
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            Destino de viaje no definido
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-between align-items-lg-center align-items-start p-0 bg-light flex-column flex-lg-row">
+                                                <h6 class="card-text p-0 m-0">
+                                                    <xsl:variable name="IDtren">
+                                                        <xsl:value-of select="@tren" />
+                                                    </xsl:variable>
+                                                    <xsl:choose>
+                                                        <xsl:when test="$IDtren = /renfe/trenes/tren/@id">
+                                                            RF -
+                                                            <xsl:value-of select="/renfe/trenes/tren[@id = $IDtren]/tipo" />
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            Tipo de tren no definido
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </h6>
+                                                <p class="card-text w-50 text-lg-center text-right p-0 m-0 pr-lg-4">
+                                                    <xsl:value-of select="@tren" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="card border-0">
+                                            <div class="card-body d-flex justify-content-start p-0 bg-light">
+                                                <h6 class="card-text">
+                                                    <xsl:value-of select="via" />
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </xsl:for-each>
+                        </div>
                     </div>
                 </div>
                 <div class="bg-light p-0 m-0 text-center">
@@ -226,13 +337,13 @@
 
 					show('cont-estacionE-tal');
 					//]]>
-				</script>
-				<!-- Optional JavaScript -->
-				<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-			</body>
-		</html>
-	</xsl:template>
+                </script>
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            </body>
+        </html>
+    </xsl:template>
 </xsl:stylesheet>
