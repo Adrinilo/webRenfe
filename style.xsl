@@ -84,15 +84,13 @@
                                 </div>
                             </div>
                             <label class="btn btn-success rounded-pill" 
-                                   onclick="document.getElementById('cont-entradas').style.display='block';
-                                            document.getElementById('cont-salidas').style.display='none';">
+                                   onclick="show('cont-entradas');hide('cont-salidas');">
                                 <input type="radio" name="options" id="option2" autocomplete="off" />
                                 ENTRADAS                                                             
                             </label>
                             
                             <label class="btn btn-success rounded-pill" 
-                                   onclick="document.getElementById('cont-salidas').style.display='block';
-                                            document.getElementById('cont-entradas').style.display='none';">
+                                   onclick="show('cont-salidas');hide('cont-entradas');">
                                 <input type="radio" name="options" id="option3" autocomplete="off" />
                                 SALIDAS
                             </label>                            
@@ -333,6 +331,10 @@
 
 					function show(id) {
 					  document.getElementById(id).style.display = 'block';
+					}
+
+                    function hide(id) {
+					  document.getElementById(id).style.display = 'none';
 					}
 
 					show('cont-estacionE-tal');
